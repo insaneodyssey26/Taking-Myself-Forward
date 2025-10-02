@@ -19,12 +19,12 @@ int main () {
     cin >> n;
     cout << "divisors: " << endl;
 
-    for (int i = 1; i <= n*n ; i++) {
+    for (int i = 1; i*i <= n ; i++) {
         if (n % i == 0) {
             cout << i << endl;
         }
-        if (n / i == i) {
-            cout << i << endl;
+        if (n / i != i) {
+            cout << n / i << endl;
         }
     }
 } // T.C : O(sqrt(n)) ... Because when divisors start repeating when n/i becomes = i .. Tai ektu better O(n) er theke
