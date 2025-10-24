@@ -13,3 +13,21 @@ public:
         return unique + 1;
     }
 };
+
+// GeeksforGeeks version
+
+class Solution {
+  public:
+    // Function to remove duplicates from the given array.
+    vector<int> removeDuplicates(vector<int> &arr) {
+        // code here
+        int unique = 0;
+        for (int i = 1; i < arr.size(); i++) {
+            if (arr[i] != arr[unique]) {
+                unique++;
+                arr[unique] = arr[i];
+            }
+        }
+        return vector<int> (arr.begin(), arr.begin() + unique + 1);
+    }
+};
