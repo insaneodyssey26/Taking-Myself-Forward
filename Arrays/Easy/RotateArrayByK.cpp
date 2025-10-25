@@ -19,3 +19,33 @@ class Solution {
 }; // Time complexity: O(n) 
   // Space complexity: O(k)
  
+
+// A better method to solve this question
+
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+        k = k % n;
+        int st = 0, end = n - 1;
+        while (st < end) {
+            swap (nums[st], nums[end]);
+            st++;
+            end--;
+        } // In this loop we reverse the entire array, so last elements comes to front
+        st = 0, end = k - 1;
+        while (st < end) {
+            swap (nums[st], nums[end]);
+            st++;
+            end--;
+        } // In this loop we reverse the first k elements, so they are in correct order
+        st = k, end = n - 1;
+        while (st < end) {
+            swap (nums[st], nums[end]);
+            st++;
+            end--;
+        } // In this loop we reverse the remaining n-k elements, so they are in correct order
+    }
+}; // Time complexity = O(n)
+    // Space complexity = O(1)
+    // This method is better as it uses constant space, time complexity remains same
