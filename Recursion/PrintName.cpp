@@ -13,3 +13,5 @@ int main () {
     cin >> n;
     name (1, n);
 }
+
+// parbi kor

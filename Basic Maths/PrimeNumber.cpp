@@ -28,9 +28,7 @@ class Solution {
                     count++;
                 }
             }   
-            
         }
-        
         if (count > 2) return false;
         else return true;
     }
