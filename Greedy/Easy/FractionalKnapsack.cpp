@@ -2,7 +2,7 @@ class Solution {
   public:
     double fractionalKnapsack(vector<int>& val, vector<int>& wt, int capacity) {
         // code here
-        int n = val.size(); // size of val
+        int n = val.size(); // size of val   
         vector<pair<double, int>> ratio; // to store ratio and index of each item
         
         for (int i = 0 ; i < n; i++) {
