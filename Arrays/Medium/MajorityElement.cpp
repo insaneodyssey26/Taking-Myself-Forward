@@ -2,7 +2,7 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        int count = 0, digit = 0;
+        int count = 0, digit = 0; // Moore's Voting Algorithm
         for (int num: nums) {
             if(count == 0) {
                 digit = num;
